@@ -1,0 +1,31 @@
+--orders the items by price
+select *
+from superstore
+order by price desc;
+
+--show the minimum price
+select min(price)
+from superstore;
+
+--sum the price form kitchen supplies
+select sum(price),category
+from superstore
+where category='Kitchen Supplies';
+
+--organize electronics by stock quantity
+select category, price, stock_quantity
+from superstore
+where category='Electronics'
+order by stock_quantity;
+
+--show max price on furnishing
+select item_name, max(price), item_id
+from superstore
+where category='Furnishings'
+order by price desc;
+
+--show min price on furnishig
+select item_name, min(price), item_id
+from superstore
+where category='Furnishings'
+order by price desc;
